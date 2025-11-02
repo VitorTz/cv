@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg-color: #0a0e1a;
+  --card-color: #151925;
+  --text-color: #e4e4e7;
+  --dark-blue: #223553;
+  --accent: #3b82f6;
+  --muted: #94a3b8;
+  --cert-card: #1e2433;
+  --shadow: rgba(59, 130, 246, 0.1);
+  --border-color: rgba(59, 130, 246, 0.3);
+  --grid-color: rgba(59, 130, 246, 0.05);
+}
+
+[data-theme="light"] {
+  --bg-color: #f8fafc;
+  --card-color: #ffffff;
+  --text-color: #0f172a;
+  --accent: #2563eb;
+  --muted: #64748b;
+  --cert-card: #f1f5f9;
+  --shadow: rgba(37, 99, 235, 0.1);
+  --border-color: rgba(37, 99, 235, 0.2);
+  --grid-color: rgba(37, 99, 235, 0.03);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem;
+  transition: background 0.3s, color 0.3s;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Grid tecnológico de fundo */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.resume {
+  padding: 0 20%;
+}
+
+header {
+  border-bottom: 4px solid var(--border-color);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+  font-family: "Roboto Mono", monospace;
+}
+
+
+header ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.8rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.9rem;
+}
+
+header ul li {
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+section {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  position: relative;
+  font-family: "Roboto Mono", monospace;
+}
+
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+}
+
+p {
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: 0.8rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.7rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+strong {
+  color: var(--accent);
+  font-weight: 600;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.95em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+  font-family: "Roboto Mono", monospace;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.cert-card {
+  background: var(--cert-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cert-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  border-radius: 12px 12px 0 0;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.cert-card:hover::before {
+  transform: scaleX(1);
+}
+
+.cert-card h3 {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.cert-card p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
+.cert-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  padding: 0.4rem 1rem;
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.cert-card a::after {
+  display: none;
+}
+
+.cert-card a:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background: var(--accent);
+}
+
+.btn-secondary {
+  background:  var(--dark-blue);    
+}
+
+
+.github {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--cert-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.github::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 130, 246, 0.05);
+  transition: left 0.5s ease;
+  z-index: 0;
+}
+
+.github::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--accent);
+  transition: width 0.4s ease;
+  border-radius: 0 0 16px 16px;
+  z-index: 1;
+}
+
+.github:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.github:hover::before {
+  left: 0;
+}
+
+.github:hover::after {
+  width: 100%;
+}
+
+.github > * {
+  position: relative;
+  z-index: 2;
+}
+
+.github h2::after {
+  display: none;
+}
+
+#qrcode {
+  width: 100px;
+  height: 100px;
+  background: white;
+  padding: 8px;
+  border-radius: 6px;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 20px var(--shadow);
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow);
+  opacity: 0.9;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  body {
+    padding: 1.5rem 1rem;
+  }
+
+  .resume {
+    padding: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .github {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
