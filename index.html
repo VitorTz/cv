@@ -3,144 +3,212 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vitor Fernando da Silva — Currículo</title>
+    <title>Vitor Fernando da Silva – Currículo</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body data-theme="light">
-    <div class="resume" id="resume">
-      
-      <header>
-        <h1>Vitor Fernando da Silva</h1>
-        <ul>
-          <li>Técnico de Informática</li>
-          <li><a href="mailto:vitor.fsz@proton.me">vitor.fsz@proton.me</a> | (48) 98435-0535</li>
-        </ul>
-      </header>
-
-      <section>
-        <h2>Objetivo</h2>
-        <p>
-          Busco minha primeira oportunidade profissional na área de TI, onde eu possa aplicar meus conhecimentos em manutenção de computadores, redes, sistemas operacionais e suporte técnico. Pretendo desenvolver experiência prática, contribuir com a equipe de TI e aprimorar minhas habilidades em resolução de problemas, atendimento ao usuário e infraestrutura de tecnologia.
-        </p>
-      </section>
-
-      <section>
-        <h2>Formação Acadêmica</h2>
-        <p>
-          <strong>Ciências da Computação</strong> – UFSC (Universidade Federal de Santa Catarina)<br>
-          Atualmente no sétimo semestre
-        </p>
-      </section>
-
-      <section>
-        <h2>Resumo Profissional</h2>
-        <ul>
-          <li>Administração de sistemas Windows e Linux</li>
-          <li>Montagem e manutenção de computadores</li>
-          <li>Configuração de redes (LAN/Wi-Fi)</li>
-          <li>Conhecimentos básicos em cibersegurança e backup de dados</li>
-          <li>Suporte ao usuário e diagnóstico de problemas</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Habilidades Técnicas</h2>
-        <ul>
-          <li>
-            <strong>Sistemas Operacionais:</strong> Windows 10/11, Windows Server,
-            Ubuntu, Debian
-          </li>
-          <li>
-            <strong>Redes:</strong> Configuração IP, DNS, DHCP, configuração de roteadores
-          </li>
-          <li><strong>Hardware:</strong> Montagem, diagnóstico, upgrades</li>
-          <li>
-            <strong>Ferramentas:</strong> VirtualBox, Área de Trabalho Remota, CMD, PowerShell,
-            SSH
-          </li>
-          <li>
-            <strong>Competências Interpessoais:</strong> Resolução de problemas, trabalho em equipe,
-            comunicação
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Projetos Pessoais</h2>
-        <ul>
-          <li>
-            <strong>Encurtador de URLs:</strong> Configuração de ambiente virtualizado
-            com Windows Server e Linux Ubuntu.
-          </li>
-          <li>
-            <strong>Workshop de Manutenção de PCs:</strong> Diagnóstico e reparo de
-            problemas de hardware, formatação de sistemas e instalação de sistemas operacionais.
-          </li>
-          <li>
-            <strong>Configuração de Rede LAN:</strong> Instalação de roteadores, configuração
-            de endereçamento IP e gerenciamento de acesso à rede para pequenos escritórios.
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Estudos Atuais</h2>
-        <ul>
-          <li>MongoDB (Bancos de dados não relacionais)</li>
-          <li>Desenvolvimento Backend (Node.js, APIs, FastAPI, integração de sistemas)</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Cursos e Certificados</h2>
-        <div class="cert-grid">
-          <div class="cert-card">
-            <h3>Administração Windows</h3>
-            <p>Udemy</p>
-            <div>
-              <a class="btn-primary" href="./files/windows.pdf" target="_blank">Ver Certificado</a>
-              <a class="btn-secondary" href="./files/redes.pdf" target="_blank">Ver Curso</a>
+  <body>
+    <div class="container">
+      <div class="resume" id="resume">
+        <header>
+          <div class="header-content">
+            <h1>Vitor Fernando da Silva</h1>
+            <div class="header-links">
+              <a href="mailto:vitor.fsz@proton.me">
+                <i class="fa-solid fa-envelope"></i>
+                vitor.fsz@proton.me
+              </a>
+              <a
+                href="https://wa.me/5548984350535?text=Olá%20Vitor,%20gostaria%20de%20falar%20com%20você."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+                (48) 98435-0535
+              </a>
+              <a href="https://github.com/VitorTz">
+                <i class="fa-brands fa-github"></i>
+                github
+              </a>
+              <a
+                href="https://www.google.com/maps?q=Florianópolis,+SC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+                Florianópolis, SC
+              </a>
             </div>
           </div>
-          <div class="cert-card">
-            <h3>Administração Linux</h3>
-            <p>Udemy</p>
-            <div>
-              <a class="btn-primary" href="./files/windows.pdf" target="_blank">Ver Certificado</a>
-              <a class="btn-secondary" href="./files/redes.pdf" target="_blank">Ver Curso</a>
-            </div>
-          </div>
-          <div class="cert-card">
-            <h3>Manutenção de Computadores</h3>
-            <p>Udemy</p>
-            <div>
-              <a class="btn-primary" href="./files/windows.pdf" target="_blank">Ver Certificado</a>
-              <a class="btn-secondary" href="./files/redes.pdf" target="_blank">Ver Curso</a>
-            </div>
-          </div>
-          <div class="cert-card">
-            <h3>Administração de Redes</h3>
-            <p>Udemy</p>
-            <div>
-              <a class="btn-primary" href="./files/windows.pdf" target="_blank">Ver Certificado</a>
-              <a class="btn-secondary" href="./files/redes.pdf" target="_blank">Ver Curso</a>
-            </div>
-          </div>
-        </div>
-      </section>
+        </header>
 
-      <a href="https://github.com/VitorTz" target="_blank" class="github">
-        <div>
-          <h2>GitHub</h2>
+        <section>
+          <h2>Objetivo</h2>
           <p>
-            https://github.com/VitorTz
+            Busco minha primeira oportunidade profissional na área de TI, onde
+            eu possa aplicar meus conhecimentos em manutenção de computadores,
+            redes, sistemas operacionais e suporte técnico. Pretendo desenvolver
+            experiência prática, contribuir com a equipe de TI e aprimorar
+            minhas habilidades em resolução de problemas, atendimento ao usuário
+            e infraestrutura de tecnologia.
           </p>
-        </div>
-        <div id="qrcode"></div>
-      </a>
-    </div>    
-    <script src="js/script.js"></script>
+        </section>
+
+        <section>
+          <h2>Formação Acadêmica</h2>
+          <p>
+            <strong>Ciências da Computação</strong> – UFSC [Em andamento / 8º
+            Semestre]
+          </p>
+        </section>
+
+        <section>
+          <h2>Experiência Práticas</h2>
+          <ul>
+            <li>Administração de sistemas Windows e Linux</li>
+            <li>Montagem e manutenção de computadores</li>
+            <li>Configuração de redes (LAN/Wi-Fi)</li>
+            <li>Conhecimentos básicos em cibersegurança e backup de dados</li>
+            <li>Suporte ao usuário e diagnóstico de problemas</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Habilidades Técnicas</h2>
+          <ul>
+            <li>
+              <strong>Sistemas Operacionais:</strong> Windows 10/11, Windows
+              Server, Ubuntu, Debian
+            </li>
+            <li>
+              <strong>Redes:</strong> Configuração IP, DNS, DHCP, configuração
+              de roteadores
+            </li>
+            <li><strong>Hardware:</strong> Montagem, diagnóstico, upgrades</li>
+            <li>
+              <strong>Ferramentas:</strong> VirtualBox, Área de Trabalho Remota,
+              CMD, PowerShell, SSH
+            </li>
+            <li>
+              <strong>Competências Interpessoais:</strong> Resolução de
+              problemas, trabalho em equipe, comunicação
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Projetos Pessoais</h2>
+          <ul>
+            <li>
+              <strong>Encurtador de URLs:</strong> Configuração de ambiente
+              virtualizado com Windows Server e Linux Ubuntu.
+            </li>
+            <li>
+              <strong>Workshop de Manutenção de PCs:</strong> Diagnóstico e
+              reparo de problemas de hardware, formatação de sistemas e
+              instalação de sistemas operacionais.
+            </li>
+            <li>
+              <strong>Configuração de Rede LAN:</strong> Instalação de
+              roteadores, configuração de endereçamento IP e gerenciamento de
+              acesso à rede para pequenos escritórios.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Estudos Atuais</h2>
+          <ul>
+            <li>MongoDB (Bancos de dados não relacionais)</li>
+            <li>
+              Desenvolvimento Backend (Node.js, APIs, FastAPI, integração de
+              sistemas)
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Cursos e Certificados</h2>
+          <div class="cert-grid">
+            <div class="cert-card">
+              <img src="files/windows-img.png" alt="Windows" />
+              <h3>Administração de sistemas Windows</h3>
+              <div>
+                <a
+                  class="btn-primary"
+                  href="./files/windows.pdf"
+                  target="_blank"
+                  >Ver Certificado</a
+                >
+                <a
+                  class="btn-secondary"
+                  href="./files/redes.pdf"
+                  target="_blank"
+                  >Ver Curso</a
+                >
+              </div>
+            </div>
+            <div class="cert-card">
+              <img src="files/linux-img.png" alt="Linux" />
+              <h3>Administração de sistemas Linux</h3>
+              <div>
+                <a
+                  class="btn-primary"
+                  href="files/cert-linux.pdf"
+                  target="_blank"
+                  >Ver Certificado</a
+                >
+                <a
+                  class="btn-secondary"
+                  href="https://www.udemy.com/course/complete-linux-training-course-to-get-your-dream-it-job"
+                  target="_blank"
+                  >Ver Curso</a
+                >
+              </div>
+            </div>
+            <div class="cert-card">
+              <h3>Montagem e manutenção de Computadores</h3>
+              <div>
+                <a
+                  class="btn-primary"
+                  href="./files/windows.pdf"
+                  target="_blank"
+                  >Ver Certificado</a
+                >
+                <a
+                  class="btn-secondary"
+                  href="./files/redes.pdf"
+                  target="_blank"
+                  >Ver Curso</a
+                >
+              </div>
+            </div>
+            <div class="cert-card">
+              <img src="files/redes.jpg" alt="Redes" />
+              <h3>Administração e Manutenção de Redes de Computadores</h3>
+              <div>
+                <a
+                  class="btn-primary"
+                  href="./files/windows.pdf"
+                  target="_blank"
+                  >Ver Certificado</a
+                >
+                <a
+                  class="btn-secondary"
+                  href="./files/redes.pdf"
+                  target="_blank"
+                  >Ver Curso</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
